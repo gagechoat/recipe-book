@@ -7,9 +7,11 @@ import { Recipe } from '../recipe';
   templateUrl: './recipe-list.component.html'
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Recipe[] = [];
+  recipes: Recipe[] = [
+    new Recipe('Cake', 'Tangy and delicious', 'http://omgchocolatedesserts.com/wp-content/uploads/2016/05/Strawberry-Chocolate-Cake-1.jpg', []),
+    new Recipe('Pasty', 'Amazingly Good', 'http://s3.amazonaws.com/gmi-digital-library/6058169a-dc6f-4a26-bb69-98b552434259.jpg', [])
+  ];
   @Output() recipeSelected = new EventEmitter<Recipe>();
-  recipe = new Recipe('dummy', 'dummy', 'http://omgchocolatedesserts.com/wp-content/uploads/2016/05/Strawberry-Chocolate-Cake-1.jpg');
 
   constructor() { }
 
