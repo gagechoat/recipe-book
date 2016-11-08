@@ -34,7 +34,8 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     HttpModule
   ],
   providers: [
-    RecipeService
+    RecipeService,
+    ShoppingListService
   ],
   bootstrap: [AppComponent]
 })
